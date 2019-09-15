@@ -1,0 +1,113 @@
+* {
+    font-family: 'Sukhumvit set', 'source sans pro', 'roboto', sans-serif;
+    color: #5a5a5a;
+    list-style: none;
+    list-style-position: outside;
+    box-sizing: border-box;
+}
+
+img {
+   max-height: 100%;
+   max-width: 100%; 
+}
+
+.container {
+    max-width: 768px;
+    /* background-color: bisque; */
+    margin: 0 auto;
+}
+
+.header {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.header p {
+    margin-top: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    height: 400px;
+}
+
+.main-image {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    flex-basis: 50%;
+}
+
+.main-image .img-grey {
+    max-width: 200px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.links a {
+    padding: 30px 0;
+    text-decoration: none;
+}
+
+/* this changes the color of code and skills when hovering... remember to change it to click on mobile, after building the desktop version */
+
+.skills-link:link {
+    color: #5a5a5a;
+}
+
+.skills-link:hover {
+    font-style: italic;
+    color: #e545b0;
+    font-size: 55px;
+}
+
+.code-link:link {
+    color: #5a5a5a;
+}
+
+.code-link:hover {
+    font-style: italic;
+    color: #17a1e5;
+    font-size: 55px;
+}
+
+.footer {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact li {
+    flex: 1 auto 1;
+    margin: 0 20px;
+    list-style-position: outside;
+}
