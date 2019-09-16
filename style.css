@@ -11,6 +11,10 @@ img {
    max-width: 100%; 
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     max-width: 768px;
     /* background-color: bisque; */
@@ -42,58 +46,136 @@ h1 {
 }
 
 .main {
-    display: flex;
-    flex-direction: row;
     margin: 0 auto;
     height: 400px;
+    width: 400px;
 }
 
-@media screen and (min-width: 992px) {
-    .main {
-        height: 500px;
-        margin-top: 50px;
-    }
-}
+/* making each image exist in the same position, layered on top of each other */
 
-.main-image {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    justify-content: flex-end;
-    flex-basis: 50%;
-}
-
-.main-image .img-grey {
-    max-width: 200px;
-}
-
-@media screen and (min-width: 992px) {
-    .main-image .img-grey {
-    max-width: 250px;
-    }
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding-left: 50px;
+.micky-grey {
+    position: absolute;
     text-align: left;
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 200px;
+    background-image: url(micky-grey.png);
+    background-size: cover;
+}
+
+.micky-blue {
+    position: absolute;
+    text-align: left;
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 200px;
+    background-image: url(micky-blue.png);
+    background-size: cover;
+    display: none;
+}
+
+.micky-pink {
+    position: absolute;
+    text-align: left;
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 200px;
+    background-image: url(micky-pink.png);
+    background-size: cover;
+    display: none;
+}
+
+/* manually positioning the links */
+
+.code-link {
+    float: right;
+    padding: 0 5%;
+    margin: 20% 10% 5% 60%;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.skills-link {
+    float: right;
+    padding: 0 5%;
+    margin: 5% 10% 0 60%;
     font-size: 50px;
     font-weight: 200;
 }
 
 @media screen and (min-width: 992px) {
-    .links {
-        font-size: 60px;
-        text-decoration: none;
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        height: 500px;
+        width: 700px;
     }
 }
 
-.links a {
-    padding: 30px 0;
-    text-decoration: none;
+@media screen and (min-width: 992px) {
+    .code-link {
+        display: flex;
+        align-items: center;
+        padding: 0 20% 0 0;
+        margin: 40% 0;
+        font-size: 55px;
+        font-weight: 200;
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .skills-link {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 20%;
+        margin: 40% 0;
+        font-size: 55px;
+        font-weight: 200;
+        order: 3;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .micky-grey {
+        display: flex;
+        min-height: 500px;
+        max-height: 500px;
+        min-width: 250px;
+        max-width: 250px;
+        background-image: url(micky-grey.png);
+        background-size: cover;
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .micky-blue {
+        min-height: 500px;
+        max-height: 500px;
+        min-width: 250px;
+        max-width: 250px;
+        margin: 0 auto;
+        background-image: url(micky-blue.png);
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .micky-pink {
+        min-height: 500px;
+        max-height: 500px;
+        min-width: 250px;
+        max-width: 250px;
+        margin: 0 auto;
+        background-image: url(micky-pink.png);
+        background-size: cover;
+    }
 }
 
 /* this changes the color of code and skills when hovering... */
@@ -102,39 +184,38 @@ h1 {
     color: #5a5a5a;
 }
 
-.skills-link:hover {
+.skills-link:hover a {
     font-style: italic;
     color: #e545b0;
-    font-size: 55px;
 }
 
-@media screen and (min-width: 992px) {
-    .skills-link:hover {
-        font-size: 65px;
-    }
+.skills-link:hover ~ .micky-grey {;
+    display: none;
+}
+
+.skills-link:hover ~ .micky-pink {;
+    display: block;
+}
+
+.code-link:hover ~ .micky-grey {;
+    display: none;
+}
+
+.code-link:hover ~ .micky-blue {;
+    display: block;
 }
 
 .code-link:link {
     color: #5a5a5a;
 }
 
-.code-link:hover {
+.code-link:hover a {
     font-style: italic;
     color: #17a1e5;
-    font-size: 55px;
-}
-
-@media screen and (min-width: 992px) {
-    .code-link:hover {
-        font-size: 65px;
-    }
 }
 
 /* here's where I use a media query to center my head and have the link options at positions 1 and 3 on desktop */
 
-@media screen and (min-width: 992px) {
-    
-}
 
 .footer {
     padding-top: 100px;
@@ -152,7 +233,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
