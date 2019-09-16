@@ -44,10 +44,14 @@ h3 {
     font-size: 28px;
     font-weight: 500;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
-a {
-    text-decoration: none;
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0;
 }
 
 p {
@@ -55,13 +59,19 @@ p {
     font-weight: 400;
 }
 
-/* each skill card is centered on the page with the text inside, since I will most likely lay out each one differently, based on the specific skill/job*/
-
 .nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.home-link {
+    text-decoration: none;
+}
+
+.code-link {
+    text-decoration: none;
 }
 
 .home-link:hover {
@@ -72,16 +82,39 @@ p {
     color: #17a1e5;
 }
 
+/* each skill card is centered on the page with the text inside, since I will most likely lay out each one differently, based on the specific skill/job*/
+
 .skill-card {
     max-width: 90%;
-    text-align: center;
     margin: 0 auto;
     border-left: 1px solid #eaeaea;
     border-bottom: 3px solid #dddddd;
-    height: 300px;
+    height: 450px;
     /* border: 1px solid #e545b0; */
     margin-bottom: 100px;
-    padding: 0 10px;
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .skill-card {
+        max-width: 90%;
+        margin: 0 auto;
+        border-left: 1px solid #eaeaea;
+        border-bottom: 3px solid #dddddd;
+        height: 350px;
+        /* border: 1px solid #e545b0; */
+        margin-bottom: 100px;
+        padding: 0 20px;
+    }
+}
+
+.external-link a {
+    text-decoration: underline;
+    color: #17a1e5
+} */
+
+ .external-link a:visited {
+    color: #17a1e5
 }
 
 .footer {
@@ -90,12 +123,24 @@ p {
     text-align: center;
 }
 
+@media screen and (min-width: 992px) {
+    .footer {
+        font-size: 20px;
+    }
+}
+
 .contact {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     max-width: 500px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+    .contact {
+        max-width: 600px;
+    }
 }
 
 .contact li {

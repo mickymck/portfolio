@@ -17,6 +17,12 @@ img {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 1920px;
+    }
+}
+
 .header {
     align-items: center;
     text-align: center;
@@ -42,6 +48,13 @@ h1 {
     height: 400px;
 }
 
+@media screen and (min-width: 992px) {
+    .main {
+        height: 500px;
+        margin-top: 50px;
+    }
+}
+
 .main-image {
     display: flex;
     padding: 0;
@@ -52,6 +65,12 @@ h1 {
 
 .main-image .img-grey {
     max-width: 200px;
+}
+
+@media screen and (min-width: 992px) {
+    .main-image .img-grey {
+    max-width: 250px;
+    }
 }
 
 .links {
@@ -65,12 +84,19 @@ h1 {
     font-weight: 200;
 }
 
+@media screen and (min-width: 992px) {
+    .links {
+        font-size: 60px;
+        text-decoration: none;
+    }
+}
+
 .links a {
     padding: 30px 0;
     text-decoration: none;
 }
 
-/* this changes the color of code and skills when hovering... remember to change it to click on mobile, after building the desktop version */
+/* this changes the color of code and skills when hovering... */
 
 .skills-link:link {
     color: #5a5a5a;
@@ -80,6 +106,12 @@ h1 {
     font-style: italic;
     color: #e545b0;
     font-size: 55px;
+}
+
+@media screen and (min-width: 992px) {
+    .skills-link:hover {
+        font-size: 65px;
+    }
 }
 
 .code-link:link {
@@ -92,10 +124,28 @@ h1 {
     font-size: 55px;
 }
 
+@media screen and (min-width: 992px) {
+    .code-link:hover {
+        font-size: 65px;
+    }
+}
+
+/* here's where I use a media query to center my head and have the link options at positions 1 and 3 on desktop */
+
+@media screen and (min-width: 992px) {
+    
+}
+
 .footer {
     padding-top: 100px;
     text-align: center;
     padding-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .footer {
+        font-size: 20px;
+    }
 }
 
 .contact {
@@ -106,8 +156,15 @@ h1 {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 992px) {
+    .contact {
+        max-width: 600px;
+    }
+}
+
 .contact li {
     flex: 1 auto 1;
     margin: 0 20px;
     list-style-position: outside;
 }
+  

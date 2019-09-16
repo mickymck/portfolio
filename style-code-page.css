@@ -50,8 +50,6 @@ h3 {
     font-weight: 500;
 }
 
-/* projects broken down into evens and odds so I can have them alternate which side of the screen the image is on, to keep the eye active*/
-
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -67,32 +65,112 @@ h3 {
     color: #e545b0;
 }
 
-.project-even {
+/* Dog Adoption Site card, mobile and desktop */
+
+.project-dog {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eaeaea;
+    border-bottom: 3px solid #dddddd;
+    padding-right: 20px;
+    margin: 0 auto 100px auto;
+    max-width: 600px;
+}
+
+.project-dog .project-text {
+    padding: 0 10px 0 20px;
+    order: 1;
+}
+
+.project-dog .dog-img {
+    display: flex;
+    height: 300px;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
+    margin: 20px;
+    order: 2;
+}
+
+.project-dog .page-code {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+    font-size: 28px;
+}
+
+@media screen and (min-width: 992px) {
+    .project-dog {
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #eaeaea;
+        border-bottom: 3px solid #dddddd;
+        padding-right: 20px;
+        margin-bottom: 100px;
+        max-width: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project-dog .dog-img {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        height: 300px;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
+        margin: 20px;
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project-dog .project-text {
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project-dog .page-code {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 200px;
+        font-size: 28px;
+    }
+}
+
+/* Lazy River card, both mobile and desktop */
+
+.project-lazy-river {
+    display: flex;
+    flex-direction: column;
     border-left: 1px solid #eaeaea;
     border-bottom: 3px solid #dddddd;
     padding-right: 20px;
     margin-bottom: 100px;
+    margin: 0 auto 100px auto;
+    max-width: 600px;
 }
 
-.project-even .project-img {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 60%;
-    height: 300px;
-    align-items: center;
-    justify-content: flex-end;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
-    margin: 20px;
+.project-lazy-river .project-text {
+    padding: 0 10px 0 20px;
     order: 1;
 }
 
-.project-even .project-text {
+.project-lazy-river .lazy-river-img {
+    display: flex;
+    height: 300px;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(lazy-river-preview.png) center/cover;
+    margin: 20px;
     order: 2;
 }
 
-.project-even .page-code {
+.project-lazy-river .page-code {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -100,37 +178,46 @@ h3 {
     font-size: 28px;
 }
 
-.project-odd {
-    display: flex;
-    flex-direction: row;
-    border-left: 1px solid #eaeaea;
-    border-bottom: 3px solid #dddddd;
-    padding-left: 20px;
-    margin-bottom: 100px;
+@media screen and (min-width: 992px) {
+    .project-lazy-river {
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #eaeaea;
+        border-bottom: 3px solid #dddddd;
+        padding-left: 20px;
+        margin-bottom: 100px;
+        max-width: none;
+    }
 }
 
-.project-odd .project-img {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 60%;
-    height: 300px;
-    align-items: center;
-    justify-content: flex-end;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
-    margin: 20px;
-    order: 2;
+@media screen and (min-width: 992px) {
+    .project-lazy-river .lazy-river-img {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        height: 300px;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(lazy-river-preview.png) center/cover;
+        margin: 20px;
+        order: 2;
+    }
 }
 
-.project-odd .project-text {
-    order: 1;
+@media screen and (min-width: 992px) {
+    .project-lazy-river .project-text {
+        order: 1;
+    }
 }
 
-.project-odd .page-code {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 200px;
-    font-size: 28px;
+@media screen and (min-width: 992px) {
+    .project-lazy-river .page-code {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 200px;
+        font-size: 28px;
+    }
 }
 
 /* this bit of CSS was necessary if I wanted the | to change color. it had to follow both the page and code classes in HTML, so I put it at the end in my HTML and adjusted the order using flex*/
@@ -188,12 +275,24 @@ h3 {
     text-align: center;
 }
 
+@media screen and (min-width: 992px) {
+    .footer {
+        font-size: 20px;
+    }
+}
+
 .contact {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     max-width: 500px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+    .contact {
+        max-width: 600px;
+    }
 }
 
 .contact li {
