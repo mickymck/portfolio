@@ -7,30 +7,9 @@
 }
 
 img {
-   max-height: 100%;
-   max-width: 100%; 
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0;
-}
-
-.container {
-    max-width: 900px;
-    /* background-color: bisque; */
-    margin: 0 auto;
-}
-
-.header {
-    align-items: center;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 20px;
-}
+    max-height: 100%;
+    max-width: 100%; 
+ }
 
 h1 {
     font-size: 72px;
@@ -56,6 +35,27 @@ h3 {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    /* background-color: bisque; */
+    margin: 0 auto;
+}
+
+.header {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -71,93 +71,8 @@ h3 {
     color: #e545b0;
 }
 
-/* Dog Adoption Site card, mobile and desktop */
-
-.project-dog {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #eaeaea;
-    border-bottom: 3px solid #dddddd;
-    padding-right: 20px;
-    margin: 0 auto 100px auto;
-    max-width: 800px;
-}
-
-.project-dog .project-text {
-    padding: 0 10px 0 20px;
-    order: 1;
-    width: 50%;
-    max-width: 400px;
-}
-
-.project-dog .dog-img {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
-    margin: 20px;
-    order: 2;
-}
-
-.project-dog .page-code {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 200px;
-    font-size: 28px;
-}
-
-@media screen and (min-width: 992px) {
-    .project-dog {
-        display: flex;
-        flex-direction: row;
-        border-left: 1px solid #eaeaea;
-        border-bottom: 3px solid #dddddd;
-        padding-right: 20px;
-        margin-bottom: 100px;
-        max-width: none;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .project-dog .dog-img {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 60%;
-        height: 300px;
-        align-items: center;
-        justify-content: flex-end;
-        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(dog-adoption-preview.png) center/cover;
-        margin: 20px;
-        order: 1;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .project-dog .project-text {
-        order: 2;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .project-dog .page-code {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 200px;
-        font-size: 28px;
-    }
-}
-
-/* Lazy River card, both mobile and desktop */
-
-.project-flavordome {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #eaeaea;
-    border-bottom: 3px solid #dddddd;
-    margin: 0 auto 100px auto;
-    max-width: 600px;
+.desktop-title {
+    display: none;
 }
 
 .project-text {
@@ -168,76 +83,44 @@ h3 {
     width: 90%;
 }
 
-.flavordome-img {
-    display: flex;
-    min-width: 300px;
-    max-width: 780px;
-    min-height: 240px;
-    max-height: 550px;
-    width: 90%;
-    align-items: flex-end;
-    justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(flavordome-thumb.png) center/cover;
-    margin: 0 auto;
-    order: 2;
+.page-code {
+    display: none;
 }
 
-.project-flavordome .page-code {
+.mobile-page-code {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 0 auto 20px auto;
     width: 200px;
     font-size: 28px;
+    text-decoration: underline;
 }
 
-@media screen and (min-width: 992px) {
-    .project-flavordome {
-        display: flex;
-        flex-direction: row;
-        border-left: 1px solid #eaeaea;
-        border-bottom: 3px solid #dddddd;
-        /* padding-left: 20px; */
-        margin-bottom: 100px;
-        max-width: 800px;
-    }
+.footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-.flavordome-img {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        min-width: 390px;
-        max-width: 780px;
-        min-height: 240px;
-        max-height: 550px;
-        align-items: center;
-        justify-content: flex-end;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(flavordome-thumb.png) center/cover;
-        margin: 10px;
-        order: 2;
-    }
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-inline-start: 0;
 }
 
-@media screen and (min-width: 992px) {
-.project-text {
-        width: 50%;
-        min-width: 390px;
-        margin: 10px;
-    }
+.contact li {
+    flex: 1 auto 1;
+    margin: 0 20px;
+    list-style-position: outside;
 }
 
-@media screen and (min-width: 992px) {
-    .project-flavordome .page-code {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 200px;
-        font-size: 28px;
-    }
+.contact-seperator {
+    display: none;
 }
-
-/* this bit of CSS was necessary if I wanted the | to change color. it had to follow both the page and code classes in HTML, so I put it at the end in my HTML and adjusted the order using flex*/
 
 .page-selector {
     display: flex;
@@ -253,8 +136,6 @@ h3 {
     display: flex;
     order: 3;
 }
-
-/* this changes the page | code colors based on hover... remember to change it to click on mobile, hover on desktop*/
 
 .page-selector:hover {
     color: #e545b0;
@@ -272,42 +153,29 @@ h3 {
     color: #e545b0;
 }
 
-.project-text {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 40%;
-    align-items: flex-start;
-}
-
-.project-text p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    display: flex;
-    align-items: flex-start;
-}
-
-.footer {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
 @media screen and (min-width: 992px) {
+    .mobile-title {
+        display: none;
+    }
+    .project-text {
+        width: 50%;
+        min-width: 390px;
+        margin: 10px;
+    }
+    .page-code {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 200px;
+        font-size: 28px;
+        text-decoration: underline;
+    }
+    .mobile-page-code {
+        display: none;
+    }
     .footer {
         font-size: 20px;
     }
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    padding-inline-start: 0;
-}
-
-@media screen and (min-width: 992px) {
     .contact {
         display: flex;
         flex-direction: row;
@@ -315,20 +183,125 @@ h3 {
         max-width: 600px;
         margin: 0 auto;
     }
+    .contact-seperator {
+        display: inline-block;
+    }
 }
 
-.contact li {
-    flex: 1 auto 1;
-    margin: 0 20px;
-    list-style-position: outside;
+
+
+/* odd project */
+
+
+
+
+.project-word-guess {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eaeaea;
+    border-bottom: 3px solid #dddddd;
+    margin: 0 auto 100px auto;
+    max-width: 600px;
 }
 
-.contact-seperator {
-    display: none;
+.project-word-guess .project-text {
+    order: 2;
+}
+
+.word-guess-img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 780px;
+    min-height: 240px;
+    max-height: 550px;
+    width: 90%;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(images/mystery-word-bg.png) center/cover;
+    margin: 0 auto;
+    order: 2;
 }
 
 @media screen and (min-width: 992px) {
-    .contact-seperator {
-        display: inline-block;
+    .project-word-guess {
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #eaeaea;
+        border-bottom: 3px solid #dddddd;
+        margin-bottom: 100px;
+        max-width: 800px;
+    }
+    .word-guess-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 390px;
+        max-width: 780px;
+        min-height: 240px;
+        max-height: 550px;
+        width: 50%;
+        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(images/mystery-word-bg.png) center/cover;
+        margin: 10px;
+        order: 2;
+    }
+    .project-word-guess .project-text {
+        order: 1;
+    }
+}
+
+
+
+/* even projects */
+
+
+
+
+.project-flavordome {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eaeaea;
+    border-bottom: 3px solid #dddddd;
+    margin: 0 auto 100px auto;
+    max-width: 600px;
+}
+
+.flavordome-img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 780px;
+    min-height: 240px;
+    max-height: 550px;
+    width: 90%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(images/flavordome-thumb.png) center/cover;
+    margin: 0 auto;
+    order: 1;
+}
+
+
+@media screen and (min-width: 992px) {
+    .project-flavordome {
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #eaeaea;
+        border-bottom: 3px solid #dddddd;
+        margin-bottom: 100px;
+        max-width: 800px;
+    }
+    .flavordome-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 390px;
+        max-width: 780px;
+        min-height: 240px;
+        max-height: 550px;
+        width: 50%;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(images/flavordome-thumb.png) center/cover;
+        margin: 10px;
+        order: 1;
     }
 }
